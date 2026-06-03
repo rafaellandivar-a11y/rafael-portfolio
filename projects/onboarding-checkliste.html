@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboarding-Checkliste | Rafael Landívar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="project-header">
+    <a href="../index.html" class="back-link">← Zurück zum Portfolio</a>
+    <h1>Onboarding-Checkliste</h1>
+    <p>
+      Eine kleine Webanwendung zur strukturierten Begleitung neuer Mitarbeitender
+      während des Onboardings.
+    </p>
+  </header>
+
+  <main class="section">
+  <div class="project-card">
+  <h2>Fortschritt</h2>
+  <p id="progressText">0 von 6 Aufgaben erledigt</p>
+
+  <div class="progress-container">
+    <div id="progressBar" class="progress-bar"></div>
+  </div>
+
+  <button id="resetButton" class="button-small reset-button">
+    Checkliste zurücksetzen
+  </button>
+</div>
+
+    <div class="project-card">
+      <h2>Checkliste</h2>
+
+      <label class="check-item">
+        <input type="checkbox" class="task">
+        Begrüßung und kurze Einführung
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="task">
+        Dokumente prüfen
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="task">
+        Sicherheitsunterweisung erklären
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="task">
+        Arbeitsbereich zeigen
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="task">
+        Ansprechpartner vorstellen
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="task">
+        Erste Rückfrage nach dem Start
+      </label>
+    </div>
+  </main>
+
+  <script src="onboarding.js"></script>
+</body>
+</html>

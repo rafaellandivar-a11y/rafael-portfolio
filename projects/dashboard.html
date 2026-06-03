@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Dashboard | Rafael Landívar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="project-header">
+    <a href="../index.html" class="back-link">← Zurück zum Portfolio</a>
+    <h1>Mini Recruiting Dashboard</h1>
+    <p>
+      Ein kleines Dashboard zur Darstellung von Recruiting- und Onboarding-Kennzahlen
+      mit einfachen Beispieldaten.
+    </p>
+  </header>
+
+  <main class="section">
+
+    <div class="project-card">
+      <h2>Projektidee</h2>
+      <p>
+        Dieses Projekt zeigt, wie Daten übersichtlich dargestellt werden können.
+        Die Zahlen sind Beispieldaten und dienen dazu, JavaScript-Funktionen,
+        Filter und dynamische Inhalte zu demonstrieren.
+      </p>
+    </div>
+
+    <div class="dashboard-cards">
+      <div class="dashboard-card">
+        <h3 id="totalCandidates">0</h3>
+        <p>Kandidaten gesamt</p>
+      </div>
+
+      <div class="dashboard-card">
+        <h3 id="interviews">0</h3>
+        <p>Interviews</p>
+      </div>
+
+      <div class="dashboard-card">
+        <h3 id="onboarding">0</h3>
+        <p>Im Onboarding</p>
+      </div>
+
+      <div class="dashboard-card">
+        <h3 id="completed">0</h3>
+        <p>Abgeschlossen</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h2>Status filtern</h2>
+
+      <div class="filter-buttons">
+        <button class="filter-button active" data-status="all">Alle</button>
+        <button class="filter-button" data-status="Interview">Interview</button>
+        <button class="filter-button" data-status="Onboarding">Onboarding</button>
+        <button class="filter-button" data-status="Abgeschlossen">Abgeschlossen</button>
+      </div>
+
+      <div id="candidateList" class="candidate-list"></div>
+    </div>
+
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

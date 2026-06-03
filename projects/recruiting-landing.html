@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruiting Landing Page | Rafael Landívar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="project-header">
+    <a href="../index.html" class="back-link">← Zurück zum Portfolio</a>
+    <h1>Recruiting Landing Page</h1>
+    <p>
+      Eine einfache Informationsseite für Bewerberinnen und Bewerber mit Prozessübersicht,
+      FAQ-Bereich und Formularprüfung.
+    </p>
+  </header>
+
+  <main class="section">
+
+    <div class="project-card">
+      <h2>Projektidee</h2>
+      <p>
+        Dieses Projekt basiert auf meiner Erfahrung im Recruiting und Onboarding.
+        Ziel ist es, Informationen für neue Bewerber klar und verständlich darzustellen.
+      </p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <span>1</span>
+        <h3>Bewerbung</h3>
+        <p>Die Bewerber nehmen Kontakt auf oder reichen ihre Unterlagen ein.</p>
+      </div>
+
+      <div class="process-step">
+        <span>2</span>
+        <h3>Information</h3>
+        <p>Der Ablauf, die Anforderungen und die nächsten Schritte werden erklärt.</p>
+      </div>
+
+      <div class="process-step">
+        <span>3</span>
+        <h3>Onboarding</h3>
+        <p>Neue Mitarbeitende erhalten eine strukturierte Einführung.</p>
+      </div>
+
+      <div class="process-step">
+        <span>4</span>
+        <h3>Begleitung</h3>
+        <p>In den ersten Tagen erfolgt eine weitere Unterstützung und Rückfrage.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h2>Häufige Fragen</h2>
+
+      <details>
+        <summary>Welche Unterlagen werden benötigt?</summary>
+        <p>In der Regel werden Kontaktdaten, Ausweisdokumente und relevante Nachweise benötigt.</p>
+      </details>
+
+      <details>
+        <summary>Wie läuft das Onboarding ab?</summary>
+        <p>Neue Mitarbeitende erhalten eine Einführung, wichtige Informationen und eine erste Begleitung.</p>
+      </details>
+
+      <details>
+        <summary>Warum ist eine klare Kommunikation wichtig?</summary>
+        <p>Sie hilft dabei, Unsicherheit zu reduzieren und den Einstieg einfacher zu machen.</p>
+      </details>
+    </div>
+
+    <div class="project-card">
+      <h2>Kontaktformular</h2>
+
+      <form id="contactForm" class="contact-form">
+        <label>
+          Name
+          <input type="text" id="name" placeholder="Ihr Name">
+        </label>
+
+        <label>
+          E-Mail
+          <input type="email" id="email" placeholder="name@email.de">
+        </label>
+
+        <label>
+          Thema
+          <select id="topic">
+            <option value="">Bitte auswählen</option>
+            <option value="bewerbung">Bewerbung</option>
+            <option value="onboarding">Onboarding</option>
+            <option value="unterlagen">Unterlagen</option>
+          </select>
+        </label>
+
+        <label>
+          Nachricht
+          <textarea id="message" placeholder="Ihre Nachricht"></textarea>
+        </label>
+
+        <p id="formMessage" class="form-message"></p>
+
+        <button type="submit" class="button-small form-button">
+          Formular prüfen
+        </button>
+      </form>
+    </div>
+
+  </main>
+
+  <script src="recruiting.js"></script>
+</body>
+</html>
