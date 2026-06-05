@@ -269,4 +269,83 @@ summary {
 .button-small:hover {
   background-color: #f97316;
   color: white !important;
+}.shop-summary {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 25px;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+.cart-box {
+  background-color: #111827;
+  color: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.cart-box h3 {
+  margin-top: 0;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.bike-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  margin-top: 0;
+}
+
+.product-category {
+  display: inline-block;
+  background-color: #fff7ed;
+  color: #c2410c;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.product-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.add-cart-button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+@media (max-width: 900px) {
+  .shop-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
 }

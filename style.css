@@ -99,6 +99,15 @@ body {
   color: #111827;
 }
 
+.highlight-card {
+  border-left: 6px solid #f97316;
+  background: linear-gradient(90deg, #ffffff, #fff7ed);
+}
+
+.highlight-card h3 {
+  color: #111827;
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -133,6 +142,356 @@ footer {
   color: white;
 }
 
+/* Botones pequeños */
+
+.button-small {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #111827;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button-small:hover {
+  background-color: #f97316;
+  color: white;
+}
+
+/* Páginas de proyectos */
+
+.project-header {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: white;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.project-header h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.project-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.back-link {
+  display: inline-block;
+  color: #f97316;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Onboarding Checkliste */
+
+.progress-container {
+  width: 100%;
+  height: 18px;
+  background-color: #e5e7eb;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #f97316;
+  transition: width 0.3s ease;
+}
+
+.check-item {
+  display: block;
+  background-color: #f9fafb;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  border: 1px solid #e5e7eb;
+}
+
+.check-item:hover {
+  background-color: #fff7ed;
+}
+
+.check-item input {
+  margin-right: 10px;
+}
+
+.reset-button {
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Recruiting Landing Page */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.process-step {
+  background-color: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.process-step span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f97316;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.process-step h3 {
+  margin-top: 0;
+}
+
+details {
+  background-color: #f9fafb;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  width: fit-content;
+}
+
+#formMessage {
+  margin: 0;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  display: none;
+}
+
+#formMessage.error {
+  display: block;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+#formMessage.success {
+  display: block;
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+}
+
+/* Mini Dashboard */
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.dashboard-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.dashboard-card h3 {
+  font-size: 42px;
+  margin: 0;
+  color: #f97316;
+}
+
+.dashboard-card p {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.filter-button {
+  border: none;
+  background-color: #e5e7eb;
+  color: #111827;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.filter-button:hover,
+.filter-button.active {
+  background-color: #f97316;
+  color: white;
+}
+
+.candidate-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.candidate-card {
+  background-color: #f9fafb;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+}
+
+.candidate-card h3 {
+  margin-top: 0;
+}
+
+/* Bike Shop Mini Store */
+
+.shop-summary {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 25px;
+  align-items: start;
+  margin-bottom: 30px;
+}
+
+.cart-box {
+  background-color: #111827;
+  color: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.cart-box h3 {
+  margin-top: 0;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.bike-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  margin-top: 0;
+}
+
+.product-category {
+  display: inline-block;
+  background-color: #fff7ed;
+  color: #c2410c;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.product-price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.add-cart-button {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .candidate-list {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 700px) {
   .navbar {
     flex-direction: column;
@@ -151,18 +510,44 @@ footer {
   .hero-content {
     margin-top: 90px;
   }
-  .button-small {
-  display: inline-block;
-  margin-top: 10px;
-  background-color: #111827;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
 }
 
-.button-small:hover {
-  background-color: #f97316;
+@media (max-width: 600px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .project-header h1 {
+    font-size: 36px;
+  }
+}.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 12px;
 }
+
+.info-table th,
+.info-table td {
+  border: 1px solid #e5e7eb;
+  padding: 14px;
+  text-align: left;
+}
+
+.info-table th {
+  background-color: #111827;
+  color: white;
+}
+
+.info-table tr:nth-child(even) {
+  background-color: #f9fafb;
 }

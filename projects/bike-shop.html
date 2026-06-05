@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bike Shop | Rafael Landívar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="project-header">
+    <a href="../index.html" class="back-link">← Zurück zum Portfolio</a>
+    <h1>Bike Shop Mini Store</h1>
+    <p>
+      Neuaufbau eines früheren Webprojekts: eine einfache Fahrrad-Shop-Seite
+      mit Produktkarten, Filterfunktion und Warenkorb-Logik.
+    </p>
+  </header>
+
+  <main class="section">
+
+    <div class="project-card">
+      <h2>Projektidee</h2>
+      <p>
+        Dieses Projekt basiert auf einer Fahrrad-Shop-Webseite, die ich vor einigen Jahren
+        als persönliches Projekt umgesetzt hatte. Da die ursprüngliche Version nicht mehr
+        verfügbar ist, wurde das Konzept neu aufgebaut und mit HTML, CSS und JavaScript
+        dokumentiert.
+      </p>
+    </div>
+
+    <div class="shop-summary">
+      <div>
+        <h2>Fahrrad-Katalog</h2>
+        <p>Filtere die Produkte nach Kategorie und füge Fahrräder zum Warenkorb hinzu.</p>
+      </div>
+
+      <div class="cart-box">
+        <h3>Warenkorb</h3>
+        <p><strong id="cartCount">0</strong> Produkte</p>
+        <p>Gesamt: <strong id="cartTotal">0 €</strong></p>
+        <button id="resetCart" class="button-small reset-button">Warenkorb leeren</button>
+      </div>
+    </div>
+
+    <div class="filter-buttons">
+      <button class="filter-button active" data-category="all">Alle</button>
+      <button class="filter-button" data-category="City">City</button>
+      <button class="filter-button" data-category="Mountain">Mountain</button>
+      <button class="filter-button" data-category="E-Bike">E-Bike</button>
+    </div>
+
+    <div id="productList" class="product-list"></div>
+
+  </main>
+
+  <script src="bike-shop.js"></script>
+</body>
+</html>
+

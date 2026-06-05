@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linux-Grundlagen | Rafael Landívar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="project-header">
+    <a href="../index.html" class="back-link">← Zurück zum Portfolio</a>
+    <h1>Linux-Grundlagen</h1>
+    <p>
+      Sammlung grundlegender Linux-Befehle und Übungen zur Arbeit mit Terminal,
+      Dateistruktur und einfacher Systemverwaltung.
+    </p>
+  </header>
+
+  <main class="section">
+
+    <div class="project-card">
+      <h2>Ziel des Projekts</h2>
+      <p>
+        Ziel dieses Lernprojekts ist es, grundlegende Linux-Kenntnisse aufzubauen
+        und wichtige Befehle nachvollziehbar zu dokumentieren.
+      </p>
+      <p>
+        Der Fokus liegt auf praktischen Grundlagen, die für IT-Support,
+        Systemintegration und Serveradministration wichtig sind.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h2>Lernumgebung</h2>
+      <ul>
+        <li><strong>System:</strong> Linux-Distribution in einer virtuellen Umgebung</li>
+        <li><strong>Werkzeug:</strong> Terminal / Kommandozeile</li>
+        <li><strong>Schwerpunkt:</strong> Dateisystem, Navigation, Benutzerrechte, einfache Verwaltung</li>
+        <li><strong>Ziel:</strong> Sicherheit im Umgang mit grundlegenden Linux-Befehlen</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>Grundlegende Befehle</h2>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Befehl</th>
+            <th>Beschreibung</th>
+            <th>Beispiel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>pwd</code></td>
+            <td>zeigt das aktuelle Verzeichnis</td>
+            <td><code>pwd</code></td>
+          </tr>
+          <tr>
+            <td><code>ls</code></td>
+            <td>listet Dateien und Ordner auf</td>
+            <td><code>ls -la</code></td>
+          </tr>
+          <tr>
+            <td><code>cd</code></td>
+            <td>wechselt das Verzeichnis</td>
+            <td><code>cd /home/user</code></td>
+          </tr>
+          <tr>
+            <td><code>mkdir</code></td>
+            <td>erstellt einen neuen Ordner</td>
+            <td><code>mkdir testordner</code></td>
+          </tr>
+          <tr>
+            <td><code>touch</code></td>
+            <td>erstellt eine leere Datei</td>
+            <td><code>touch datei.txt</code></td>
+          </tr>
+          <tr>
+            <td><code>cp</code></td>
+            <td>kopiert Dateien oder Ordner</td>
+            <td><code>cp datei.txt backup.txt</code></td>
+          </tr>
+          <tr>
+            <td><code>mv</code></td>
+            <td>verschiebt oder benennt Dateien um</td>
+            <td><code>mv alt.txt neu.txt</code></td>
+          </tr>
+          <tr>
+            <td><code>rm</code></td>
+            <td>löscht Dateien oder Ordner</td>
+            <td><code>rm datei.txt</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="project-card">
+      <h2>Benutzerrechte und Verwaltung</h2>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Befehl</th>
+            <th>Beschreibung</th>
+            <th>Beispiel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>whoami</code></td>
+            <td>zeigt den aktuell angemeldeten Benutzer</td>
+            <td><code>whoami</code></td>
+          </tr>
+          <tr>
+            <td><code>sudo</code></td>
+            <td>führt Befehle mit administrativen Rechten aus</td>
+            <td><code>sudo apt update</code></td>
+          </tr>
+          <tr>
+            <td><code>chmod</code></td>
+            <td>ändert Dateiberechtigungen</td>
+            <td><code>chmod 755 script.sh</code></td>
+          </tr>
+          <tr>
+            <td><code>chown</code></td>
+            <td>ändert Besitzer von Dateien oder Ordnern</td>
+            <td><code>sudo chown user:user datei.txt</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="project-card">
+      <h2>Systeminformationen</h2>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Befehl</th>
+            <th>Beschreibung</th>
+            <th>Beispiel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>uname -a</code></td>
+            <td>zeigt Informationen zum System und Kernel</td>
+            <td><code>uname -a</code></td>
+          </tr>
+          <tr>
+            <td><code>df -h</code></td>
+            <td>zeigt Speicherplatz der Dateisysteme</td>
+            <td><code>df -h</code></td>
+          </tr>
+          <tr>
+            <td><code>free -h</code></td>
+            <td>zeigt Arbeitsspeicherinformationen</td>
+            <td><code>free -h</code></td>
+          </tr>
+          <tr>
+            <td><code>ip a</code></td>
+            <td>zeigt Netzwerkinterfaces und IP-Adressen</td>
+            <td><code>ip a</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="project-card">
+      <h2>Was ich dabei lerne</h2>
+      <ul>
+        <li>sicherer Umgang mit der Linux-Kommandozeile</li>
+        <li>Navigation im Dateisystem</li>
+        <li>Erstellen, Kopieren, Verschieben und Löschen von Dateien</li>
+        <li>Grundverständnis für Benutzerrechte</li>
+        <li>Abruf einfacher System- und Netzwerkinformationen</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>Bezug zur Systemintegration</h2>
+      <p>
+        Linux-Grundkenntnisse sind für viele Bereiche der Systemintegration wichtig,
+        zum Beispiel bei Servern, Netzwerken, IT-Support, Automatisierung und Fehlersuche.
+        Dieses Lernprojekt hilft mir, ein solides Fundament für spätere administrative
+        Aufgaben aufzubauen.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h2>Status</h2>
+      <p>
+        Dieses Projekt wird laufend erweitert. Geplant sind weitere Übungen zu
+        Benutzerverwaltung, Paketverwaltung, Netzwerkdiagnose und einfachen Shell-Skripten.
+      </p>
+    </div>
+
+  </main>
+
+</body>
+</html>

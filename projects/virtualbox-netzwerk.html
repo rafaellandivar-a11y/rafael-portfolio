@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VirtualBox Netzwerk-Labor | Rafael Landívar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="project-header">
+    <a href="../index.html" class="back-link">← Zurück zum Portfolio</a>
+    <h1>VirtualBox Netzwerk-Labor</h1>
+    <p>
+      Lernprojekt zu Netzwerkeinstellungen in VirtualBox, insbesondere NAT und internes Netzwerk.
+    </p>
+  </header>
+
+  <main class="section">
+
+    <div class="project-card">
+      <h2>Ziel des Projekts</h2>
+      <p>
+        Ziel dieses Projekts war es, verschiedene Netzwerkeinstellungen in VirtualBox
+        praktisch zu verstehen und deren Auswirkungen auf virtuelle Maschinen zu vergleichen.
+      </p>
+      <p>
+        Besonders betrachtet wurden die Einstellungen NAT und internes Netzwerk, da diese
+        häufig beim Aufbau von Testumgebungen in der Systemintegration verwendet werden.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h2>Testumgebung</h2>
+      <ul>
+        <li><strong>Virtualisierung:</strong> Oracle VirtualBox</li>
+        <li><strong>Virtuelle Maschinen:</strong> Windows Server / Windows Client</li>
+        <li><strong>Netzwerkmodi:</strong> NAT und internes Netzwerk</li>
+        <li><strong>Ziel:</strong> Aufbau einer isolierten Lernumgebung</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>NAT</h2>
+      <p>
+        Bei der Netzwerkeinstellung NAT erhält die virtuelle Maschine Zugriff auf das Internet
+        über den Host-Computer. Die virtuelle Maschine ist dabei normalerweise nicht direkt
+        aus dem lokalen Netzwerk erreichbar.
+      </p>
+
+      <p><strong>Typischer Einsatz:</strong></p>
+      <ul>
+        <li>Internetzugriff für Updates</li>
+        <li>Download von Software</li>
+        <li>einfache Testumgebungen ohne direkte Netzwerkfreigabe</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>Internes Netzwerk</h2>
+      <p>
+        Beim internen Netzwerk können virtuelle Maschinen miteinander kommunizieren,
+        wenn sie denselben Netzwerknamen verwenden. Es besteht jedoch kein direkter Zugriff
+        auf das Internet oder auf das lokale Netzwerk des Host-Systems.
+      </p>
+
+      <p><strong>Typischer Einsatz:</strong></p>
+      <ul>
+        <li>isolierte Laborumgebung</li>
+        <li>Tests mit Server und Client</li>
+        <li>Übungen zu IP-Adressen, DHCP, DNS oder Domänenumgebungen</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>Vergleich: NAT und internes Netzwerk</h2>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Merkmal</th>
+            <th>NAT</th>
+            <th>Internes Netzwerk</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Internetzugriff</td>
+            <td>Ja</td>
+            <td>Nein</td>
+          </tr>
+          <tr>
+            <td>Kommunikation zwischen VMs</td>
+            <td>eingeschränkt / abhängig von Konfiguration</td>
+            <td>Ja, wenn gleicher Netzwerkname</td>
+          </tr>
+          <tr>
+            <td>Zugriff auf lokales Netzwerk</td>
+            <td>nicht direkt</td>
+            <td>Nein</td>
+          </tr>
+          <tr>
+            <td>Geeignet für Laborübungen</td>
+            <td>teilweise</td>
+            <td>Ja</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="project-card">
+      <h2>Was ich dabei gelernt habe</h2>
+      <ul>
+        <li>Unterschied zwischen NAT und internem Netzwerk</li>
+        <li>Aufbau isolierter Testumgebungen in VirtualBox</li>
+        <li>Bedeutung von Netzwerknamen bei internen Netzwerken</li>
+        <li>Grundlagen virtueller Netzwerkadapter</li>
+        <li>Warum Netzwerkeinstellungen für Server-Client-Übungen wichtig sind</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>Bezug zur Systemintegration</h2>
+      <p>
+        Das Verständnis von Netzwerkmodi ist eine wichtige Grundlage für die Arbeit
+        als Fachinformatiker für Systemintegration. Virtuelle Testumgebungen ermöglichen
+        es, Server, Clients und Netzwerkdienste sicher zu üben, ohne ein reales Netzwerk
+        zu beeinflussen.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h2>Status</h2>
+      <p>
+        Dieses Lernprojekt wird weiter ausgebaut. Geplant sind zusätzliche Übungen mit
+        statischen IP-Adressen, Ping-Tests, DHCP, DNS und einer einfachen Server-Client-Struktur.
+      </p>
+    </div>
+
+  </main>
+
+</body>
+</html>
