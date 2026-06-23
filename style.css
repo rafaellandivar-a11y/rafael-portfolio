@@ -603,3 +603,221 @@ summary {
     grid-template-columns: 1fr;
   }
 }
+/* Netzwerkplanung Bürogebäude - Skizze */
+
+.building-sketch {
+  margin: 30px 0;
+  padding: 25px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+}
+
+.floor {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: 8px;
+}
+
+.floor-label {
+  background-color: #111827;
+  color: white;
+  border-radius: 14px;
+  padding: 20px 12px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floor-content {
+  display: grid;
+  grid-template-columns: 180px 1fr 110px;
+  gap: 15px;
+  align-items: stretch;
+  background-color: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 15px;
+}
+
+.floor-distributor {
+  background-color: #fff7ed;
+  border: 2px solid #f97316;
+  border-radius: 12px;
+  padding: 16px 10px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.floor-distributor span {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 6px;
+  font-weight: normal;
+}
+
+.main-distributor {
+  background-color: #111827;
+  color: white;
+  border-color: #111827;
+}
+
+.main-distributor span {
+  color: #d1d5db;
+}
+
+.floor-rooms {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.room {
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.room strong {
+  color: #111827;
+}
+
+.wlan-room {
+  background-color: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.server-room {
+  background-color: #ecfdf5;
+  border-color: #86efac;
+}
+
+.wifi-box {
+  background-color: #eff6ff;
+  border: 2px dashed #2563eb;
+  color: #1d4ed8;
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backbone-line {
+  width: 6px;
+  height: 28px;
+  background-color: #f97316;
+  margin-left: 57px;
+  border-radius: 10px;
+}
+
+.legend {
+  margin-top: 25px;
+  display: grid;
+  gap: 10px;
+  background-color: white;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.legend-line {
+  display: inline-block;
+  width: 36px;
+  height: 5px;
+  border-radius: 5px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.legend-line.fiber {
+  background-color: #f97316;
+}
+
+.legend-line.copper {
+  background-color: #6b7280;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 3px dashed #2563eb;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+  .floor {
+    grid-template-columns: 1fr;
+  }
+
+  .floor-content {
+    grid-template-columns: 1fr;
+  }
+
+  .floor-rooms {
+    grid-template-columns: 1fr;
+  }
+
+  .backbone-line {
+    margin: 0 auto;
+  }
+}
+/* Netzwerkplanung - Excel ähnliche Übersicht */
+
+.network-plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.network-plan-table th,
+.network-plan-table td {
+  border: 1px solid #d1d5db;
+  padding: 14px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.network-plan-table th {
+  background-color: #111827;
+  color: white;
+  font-weight: bold;
+}
+
+.network-plan-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.network-plan-table td:first-child {
+  background-color: #fff7ed;
+  color: #111827;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .network-plan-table {
+    display: block;
+    overflow-x: auto;
+  }
+}

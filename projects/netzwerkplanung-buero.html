@@ -104,19 +104,178 @@
     </div>
 
     <div class="project-card">
-      <h2>Vereinfachte Übersicht</h2>
+  <h2>Übersichtsplan des Netzes</h2>
 
-      <div class="network-diagram">
-        <div class="diagram-box main-box">Serverraum / Gebäudeverteiler</div>
-        <div class="diagram-line"></div>
+  <p>
+    Die folgende Skizze zeigt eine vereinfachte Netzwerkplanung für das Bürogebäude.
+    Der Serverraum im Erdgeschoss bildet den zentralen Punkt. Von dort aus werden
+    die Etagenverteiler über Glasfaser angebunden. Innerhalb der Etagen erfolgt die
+    Verteilung über Patchpanel, Switches und strukturierte Kupferverkabelung zu den
+    Arbeitsplätzen. Zusätzlich werden WLAN-Accesspoints für mobile Geräte eingeplant.
+  </p>
 
-        <div class="diagram-grid">
-          <div class="diagram-box">Etagenverteiler 3. Stock<br><span>Switch · Patchpanel · WLAN</span></div>
-          <div class="diagram-box">Etagenverteiler 2. Stock<br><span>Switch · Patchpanel · WLAN</span></div>
-          <div class="diagram-box">Etagenverteiler 1. Stock<br><span>Switch · Patchpanel · WLAN</span></div>
-          <div class="diagram-box">Etagenverteiler EG<br><span>Switch · Patchpanel · Serveranbindung</span></div>
+  <div class="building-sketch">
+
+    <div class="floor">
+      <div class="floor-label">3. Stock</div>
+
+      <div class="floor-content">
+        <div class="floor-distributor">
+          EV 3<br>
+          <span>Switch + Patchpanel</span>
         </div>
+
+        <div class="floor-rooms">
+          <div class="room">2 Chefbüros<br><strong>2 PCs</strong></div>
+          <div class="room">2 Vorzimmer<br><strong>2 PCs</strong></div>
+          <div class="room">Personalabteilung<br><strong>2 PCs</strong></div>
+          <div class="room">Controlling<br><strong>4 PCs</strong></div>
+        </div>
+
+        <div class="wifi-box">WLAN AP</div>
       </div>
+    </div>
+
+    <div class="backbone-line"></div>
+
+    <div class="floor">
+      <div class="floor-label">2. Stock</div>
+
+      <div class="floor-content">
+        <div class="floor-distributor">
+          EV 2<br>
+          <span>Switch + Patchpanel</span>
+        </div>
+
+        <div class="floor-rooms">
+          <div class="room">Software-Entwicklung Büro 1<br><strong>4 PCs</strong></div>
+          <div class="room">Software-Entwicklung Büro 2<br><strong>4 PCs</strong></div>
+          <div class="room">Software-Entwicklung Büro 3<br><strong>4 PCs</strong></div>
+          <div class="room">Software-Entwicklung Büro 4<br><strong>4 PCs</strong></div>
+        </div>
+
+        <div class="wifi-box">WLAN AP</div>
+      </div>
+    </div>
+
+    <div class="backbone-line"></div>
+
+    <div class="floor">
+      <div class="floor-label">1. Stock</div>
+
+      <div class="floor-content">
+        <div class="floor-distributor">
+          EV 1<br>
+          <span>Switch + Patchpanel</span>
+        </div>
+
+        <div class="floor-rooms">
+          <div class="room">Vertrieb / Buchhaltung<br><strong>12 PCs</strong></div>
+          <div class="room">Außendienst Büro 1</div>
+          <div class="room">Außendienst Büro 2</div>
+          <div class="room">Außendienst Büro 3</div>
+          <div class="room wlan-room">Außendienst<br><strong>10 Laptops über WLAN</strong></div>
+        </div>
+
+        <div class="wifi-box">WLAN AP</div>
+      </div>
+    </div>
+
+    <div class="backbone-line"></div>
+
+    <div class="floor ground-floor">
+      <div class="floor-label">EG</div>
+
+      <div class="floor-content">
+        <div class="floor-distributor main-distributor">
+          Serverraum<br>
+          <span>GV / Core Switch</span>
+        </div>
+
+        <div class="floor-rooms">
+          <div class="room">Empfang<br><strong>1 PC</strong></div>
+          <div class="room">Konferenzraum<br><strong>1 PC</strong></div>
+          <div class="room server-room">Serverraum<br><strong>4 Server</strong></div>
+          <div class="room">Internet / Router / Firewall</div>
+        </div>
+
+        <div class="wifi-box">WLAN AP</div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div><span class="legend-line fiber"></span> Glasfaser-Backbone zwischen GV und Etagenverteilern</div>
+      <div><span class="legend-line copper"></span> Kupferverkabelung von Etagenverteiler zu Netzwerkdosen</div>
+      <div><span class="legend-dot"></span> WLAN-Accesspoint für mobile Endgeräte</div>
+    </div>
+
+  </div>
+  <div class="project-card">
+  <h2>Etagen- und Anschlussübersicht</h2>
+
+  <p>
+    Die folgende Übersicht fasst die geplanten Endgeräte, Verteiler und
+    Anschlussarten pro Etage zusammen.
+  </p>
+
+  <table class="network-plan-table">
+    <thead>
+      <tr>
+        <th>Etage</th>
+        <th>Bereiche</th>
+        <th>Endgeräte</th>
+        <th>Verteiler</th>
+        <th>Anbindung</th>
+        <th>WLAN</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><strong>3. Stock</strong></td>
+        <td>Chefbüros, Vorzimmer, Personalabteilung, Controlling</td>
+        <td>10 PCs</td>
+        <td>EV 3<br>Switch + Patchpanel</td>
+        <td>Glasfaser zum GV<br>Kupfer zu Netzwerkdosen</td>
+        <td>1 Accesspoint</td>
+      </tr>
+
+      <tr>
+        <td><strong>2. Stock</strong></td>
+        <td>Software-Entwicklung, 4 Büros</td>
+        <td>16 PCs</td>
+        <td>EV 2<br>Switch + Patchpanel</td>
+        <td>Glasfaser zum GV<br>Kupfer zu Netzwerkdosen</td>
+        <td>1 Accesspoint</td>
+      </tr>
+
+      <tr>
+        <td><strong>1. Stock</strong></td>
+        <td>Vertrieb, Buchhaltung, Außendienstbüros</td>
+        <td>12 PCs<br>10 Laptops über WLAN</td>
+        <td>EV 1<br>Switch + Patchpanel</td>
+        <td>Glasfaser zum GV<br>Kupfer zu Netzwerkdosen</td>
+        <td>1 Accesspoint</td>
+      </tr>
+
+      <tr>
+        <td><strong>EG</strong></td>
+        <td>Empfang, Konferenzraum, Serverraum</td>
+        <td>2 PCs<br>4 Server</td>
+        <td>GV / Core Switch<br>Serverraum</td>
+        <td>zentrale Verteilung<br>Internet / Router / Firewall</td>
+        <td>1 Accesspoint</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <p>
+    Kommentar: Pro Etage wird ein Etagenverteiler vorgesehen. Die Verbindung vom
+    Gebäudeverteiler im Serverraum zu den Etagenverteilern erfolgt über Glasfaser.
+    Die Endgeräte in den Büros werden über strukturierte Kupferverkabelung angebunden.
+    Für die Außendienstmitarbeiter und mobile Geräte werden WLAN-Accesspoints eingeplant.
+  </p>
+</div>
 
       <p>
         Die Darstellung ist bewusst vereinfacht. Sie zeigt die Grundidee: zentrale
