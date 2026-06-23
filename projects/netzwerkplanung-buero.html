@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netzwerkplanung Bürogebäude | Rafael Landívar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="project-header">
+    <a href="../index.html" class="back-link">← Zurück zum Portfolio</a>
+    <h1>Netzwerkplanung für ein Bürogebäude</h1>
+    <p>
+      Lernprojekt zur Planung einer strukturierten Netzwerkverkabelung für ein
+      mehrstöckiges Bürogebäude nach EN 50173 und EN 50174.
+    </p>
+  </header>
+
+  <main class="section">
+
+    <div class="project-card">
+      <h2>Ziel des Projekts</h2>
+      <p>
+        Dieses Lernprojekt zeigt eine einfache Netzwerkplanung für ein Bürogebäude
+        mit mehreren Stockwerken. Der Schwerpunkt liegt auf strukturierter Verkabelung,
+        Glasfaser-Backbone, Etagenverteilern, Switches, Patchpanels und WLAN-Anbindung.
+      </p>
+      <p>
+        Ziel ist es, eine nachvollziehbare Grundstruktur für ein kleines bis mittleres
+        Unternehmensnetzwerk zu planen und die wichtigsten Komponenten zu dokumentieren.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h2>Ausgangssituation</h2>
+      <p>
+        Geplant wird ein Bürogebäude mit mehreren Etagen. In den einzelnen Bereichen
+        befinden sich Arbeitsplätze, Server, Besprechungsräume und mobile Endgeräte.
+        Zusätzlich sollen WLAN-Zugänge für Laptops und mobile Geräte berücksichtigt werden.
+      </p>
+      <ul>
+        <li>mehrere Stockwerke</li>
+        <li>Arbeitsplätze mit Netzwerkanschlüssen</li>
+        <li>Serverraum im Erdgeschoss</li>
+        <li>WLAN-Anbindung für mobile Geräte</li>
+        <li>zentrale und etagenbezogene Verteilung</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>Planungsgrundlage</h2>
+      <p>
+        Die Planung orientiert sich an den Grundprinzipien der strukturierten Verkabelung.
+        Dabei wird das Netzwerk hierarchisch aufgebaut und in Bereiche gegliedert:
+      </p>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Bereich</th>
+            <th>Beschreibung</th>
+            <th>Geplante Umsetzung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primärverkabelung</td>
+            <td>Verbindung zwischen Gebäuden oder zentralen Verteilern</td>
+            <td>Glasfaser-Backbone zwischen zentralen Bereichen</td>
+          </tr>
+          <tr>
+            <td>Sekundärverkabelung</td>
+            <td>Verbindung innerhalb des Gebäudes zwischen Gebäude- und Etagenverteilern</td>
+            <td>Glasfaser vom Serverraum zu den Etagenverteilern</td>
+          </tr>
+          <tr>
+            <td>Tertiärverkabelung</td>
+            <td>Verkabelung von Etagenverteilern zu den Arbeitsplätzen</td>
+            <td>Kupferverkabelung zu Netzwerkdosen und Endgeräten</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="project-card">
+      <h2>Geplante Netzwerkstruktur</h2>
+      <p>
+        Der Serverraum bildet den zentralen Punkt des Gebäudenetzwerks. Von dort werden
+        die einzelnen Etagen über Glasfaser angebunden. Auf jeder Etage befindet sich ein
+        Etagenverteiler mit Patchpanel und Switch. Von dort führen Kupferleitungen zu den
+        Netzwerkdosen an den Arbeitsplätzen.
+      </p>
+
+      <ul>
+        <li>zentraler Serverraum im Erdgeschoss</li>
+        <li>Gebäudeverteiler im Serverraum</li>
+        <li>je Etage ein Etagenverteiler</li>
+        <li>Glasfaserverbindung zwischen Gebäudeverteiler und Etagenverteilern</li>
+        <li>Patchpanel zur sauberen Kabelorganisation</li>
+        <li>Switches zur Verteilung der Netzwerkverbindungen</li>
+        <li>WLAN-Accesspoints für mobile Endgeräte</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>Vereinfachte Übersicht</h2>
+
+      <div class="network-diagram">
+        <div class="diagram-box main-box">Serverraum / Gebäudeverteiler</div>
+        <div class="diagram-line"></div>
+
+        <div class="diagram-grid">
+          <div class="diagram-box">Etagenverteiler 3. Stock<br><span>Switch · Patchpanel · WLAN</span></div>
+          <div class="diagram-box">Etagenverteiler 2. Stock<br><span>Switch · Patchpanel · WLAN</span></div>
+          <div class="diagram-box">Etagenverteiler 1. Stock<br><span>Switch · Patchpanel · WLAN</span></div>
+          <div class="diagram-box">Etagenverteiler EG<br><span>Switch · Patchpanel · Serveranbindung</span></div>
+        </div>
+      </div>
+
+      <p>
+        Die Darstellung ist bewusst vereinfacht. Sie zeigt die Grundidee: zentrale
+        Verteilung im Serverraum, Glasfaser-Backbone zu den Etagen und strukturierte
+        Verteilung innerhalb der Etagen.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h2>Benötigte Komponenten</h2>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Komponente</th>
+            <th>Funktion</th>
+            <th>Bemerkung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Serverschrank</td>
+            <td>zentrale Aufnahme von Servern, Switches und Patchpanels</td>
+            <td>im Serverraum</td>
+          </tr>
+          <tr>
+            <td>Etagenverteiler</td>
+            <td>Verteilung der Netzwerkanschlüsse pro Etage</td>
+            <td>ein Verteiler je Stockwerk</td>
+          </tr>
+          <tr>
+            <td>Patchpanel</td>
+            <td>saubere Auflegung und Organisation der Leitungen</td>
+            <td>im Verteiler-/Serverschrank</td>
+          </tr>
+          <tr>
+            <td>Managed Switch</td>
+            <td>Verbindung der Endgeräte im Netzwerk</td>
+            <td>optional VLAN-fähig</td>
+          </tr>
+          <tr>
+            <td>Glasfaserkabel</td>
+            <td>Backbone zwischen Serverraum und Etagen</td>
+            <td>hohe Bandbreite, störungsarm</td>
+          </tr>
+          <tr>
+            <td>Kupferkabel Cat 6A / Cat 7</td>
+            <td>Anbindung der Arbeitsplätze</td>
+            <td>für strukturierte Büroverkabelung</td>
+          </tr>
+          <tr>
+            <td>Netzwerkdosen</td>
+            <td>Anschluss der Endgeräte am Arbeitsplatz</td>
+            <td>mindestens zwei Anschlüsse pro Arbeitsplatz sinnvoll</td>
+          </tr>
+          <tr>
+            <td>WLAN-Accesspoints</td>
+            <td>drahtlose Anbindung mobiler Geräte</td>
+            <td>Positionierung je nach Gebäude und Abdeckung</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="project-card">
+      <h2>WLAN-Anbindung</h2>
+      <p>
+        Für mobile Endgeräte werden WLAN-Accesspoints eingeplant. Diese sollten so
+        positioniert werden, dass eine ausreichende Funkabdeckung in den Bürobereichen
+        erreicht wird. In der Praxis wären dafür zusätzlich eine Ausleuchtungsmessung und
+        eine Prüfung möglicher Störquellen sinnvoll.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h2>Was ich dabei gelernt habe</h2>
+      <ul>
+        <li>Grundprinzipien strukturierter Verkabelung</li>
+        <li>Unterschied zwischen Primär-, Sekundär- und Tertiärverkabelung</li>
+        <li>Bedeutung von Etagenverteilern, Switches und Patchpanels</li>
+        <li>Einsatz von Glasfaser als Backbone</li>
+        <li>Planung von WLAN-Anbindung für mobile Geräte</li>
+        <li>Zusammenhang zwischen Normen, Planung und praktischer Umsetzung</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>Bezug zur Systemintegration</h2>
+      <p>
+        Dieses Projekt zeigt typische Grundlagen der IT-Systemintegration: Analyse einer
+        Ausgangssituation, Planung einer Netzwerkstruktur, Auswahl geeigneter Komponenten
+        und verständliche technische Dokumentation.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h2>Status</h2>
+      <p>
+        Dieses Projekt ist ein Lernprojekt und kann weiter ausgebaut werden. Geplant sind
+        eine genauere Mengenermittlung, eine einfache Kostenschätzung und eine detailliertere
+        Netzwerkskizze.
+      </p>
+    </div>
+
+  </main>
+
+</body>
+</html>
