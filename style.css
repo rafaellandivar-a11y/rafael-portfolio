@@ -821,3 +821,93 @@ summary {
     overflow-x: auto;
   }
 }
+/* IPv4 / IPv6 Lernprojekt */
+
+.tcpip-stack {
+  display: grid;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.stack-layer {
+  background-color: #111827;
+  color: white;
+  border-radius: 14px;
+  padding: 18px;
+  display: grid;
+  gap: 6px;
+  border-left: 8px solid #f97316;
+}
+
+.stack-layer span {
+  color: #d1d5db;
+  font-size: 15px;
+}
+
+.subnet-example {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.subnet-example div {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.subnet-example span {
+  display: block;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.subnet-example strong {
+  font-size: 18px;
+  color: #111827;
+}
+
+.ipv6-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.ipv6-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.ipv6-card h3 {
+  margin-top: 0;
+}
+
+.ipv6-card p {
+  font-weight: bold;
+  color: #f97316;
+}
+
+.ipv6-card span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .subnet-example,
+  .ipv6-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .subnet-example,
+  .ipv6-grid {
+    grid-template-columns: 1fr;
+  }
+}

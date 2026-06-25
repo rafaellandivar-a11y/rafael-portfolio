@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPv4 und IPv6 Grundlagen | Rafael Landívar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="project-header">
+    <a href="../index.html" class="back-link">← Zurück zum Portfolio</a>
+    <h1>IPv4 und IPv6 Grundlagen</h1>
+    <p>
+      Lernprojekt zu TCP/IP, MAC- und IP-Adressen, IPv4-Subnetting,
+      IPv6-Adressierung und Übergangsmechanismen.
+    </p>
+  </header>
+
+  <main class="section">
+
+    <div class="project-card">
+      <h2>Ziel des Projekts</h2>
+      <p>
+        In diesem Lernprojekt beschäftige ich mich mit den Grundlagen der
+        Netzwerkadressierung. Der Fokus liegt auf dem TCP/IP-Modell, MAC- und
+        IP-Adressen, IPv4-Adressierung, Subnetting, IPv6-Grundlagen und dem
+        Übergang von IPv4 zu IPv6.
+      </p>
+      <p>
+        Ziel ist es, die wichtigsten Zusammenhänge nicht nur theoretisch zu lernen,
+        sondern sie verständlich zu dokumentieren und mit einfachen Beispielen
+        nachvollziehbar darzustellen.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h2>TCP/IP-Protokollstapel</h2>
+      <p>
+        Der TCP/IP-Protokollstapel beschreibt, wie Daten in einem Netzwerk von einer
+        Anwendung bis zum Übertragungsmedium verarbeitet und weitergeleitet werden.
+      </p>
+
+      <div class="tcpip-stack">
+        <div class="stack-layer">
+          <strong>Anwendungsschicht</strong>
+          <span>HTTP, FTP, SMTP, DNS</span>
+        </div>
+        <div class="stack-layer">
+          <strong>Transportschicht</strong>
+          <span>TCP, UDP, Ports</span>
+        </div>
+        <div class="stack-layer">
+          <strong>Internetschicht</strong>
+          <span>IPv4, IPv6, ICMP, ARP</span>
+        </div>
+        <div class="stack-layer">
+          <strong>Netzwerkschicht</strong>
+          <span>Ethernet, WLAN, Frames, MAC-Adresse</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h2>MAC-Adresse und IP-Adresse</h2>
+      <p>
+        Eine MAC-Adresse identifiziert die Netzwerkkarte auf der lokalen
+        Netzwerkebene. Eine IP-Adresse identifiziert ein Gerät logisch innerhalb
+        eines Netzwerks.
+      </p>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Adresse</th>
+            <th>Ebene</th>
+            <th>Aufgabe</th>
+            <th>Beispiel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MAC-Adresse</td>
+            <td>Netzwerkschicht / lokale Kommunikation</td>
+            <td>eindeutige Hardware-Adresse einer Netzwerkkarte</td>
+            <td><code>3C-22-FB-19-1E-69</code></td>
+          </tr>
+          <tr>
+            <td>IPv4-Adresse</td>
+            <td>Internetschicht</td>
+            <td>logische Adresse eines Geräts im Netzwerk</td>
+            <td><code>192.168.10.67</code></td>
+          </tr>
+          <tr>
+            <td>IPv6-Adresse</td>
+            <td>Internetschicht</td>
+            <td>moderne 128-Bit-Adresse mit sehr großem Adressraum</td>
+            <td><code>2001:db8::1</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="project-card">
+      <h2>IPv4 und Subnetting</h2>
+      <p>
+        Eine IPv4-Adresse besteht aus 32 Bit und wird in vier Oktetten dargestellt.
+        Mithilfe der Subnetzmaske wird bestimmt, welcher Teil der Adresse zum Netzwerk
+        und welcher Teil zum Host gehört.
+      </p>
+
+      <div class="subnet-example">
+        <div>
+          <span>IPv4-Adresse</span>
+          <strong>192.168.10.67</strong>
+        </div>
+        <div>
+          <span>Subnetzmaske</span>
+          <strong>255.255.255.0</strong>
+        </div>
+        <div>
+          <span>CIDR-Schreibweise</span>
+          <strong>/24</strong>
+        </div>
+        <div>
+          <span>Netzwerkadresse</span>
+          <strong>192.168.10.0</strong>
+        </div>
+        <div>
+          <span>Broadcast-Adresse</span>
+          <strong>192.168.10.255</strong>
+        </div>
+        <div>
+          <span>Nutzbare Hosts</span>
+          <strong>254</strong>
+        </div>
+      </div>
+
+      <p>
+        Bei einem /24-Netz stehen 8 Bit für Host-Adressen zur Verfügung.
+        Daraus ergeben sich 2⁸ = 256 mögliche Adressen. Da Netzwerkadresse und
+        Broadcast-Adresse nicht an Hosts vergeben werden, bleiben 254 nutzbare
+        Host-Adressen.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h2>Private IPv4-Adressbereiche</h2>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Adressbereich</th>
+            <th>Typischer Einsatz</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>10.0.0.0 – 10.255.255.255</code></td>
+            <td>große private Netzwerke</td>
+          </tr>
+          <tr>
+            <td><code>172.16.0.0 – 172.31.255.255</code></td>
+            <td>mittlere private Netzwerke</td>
+          </tr>
+          <tr>
+            <td><code>192.168.0.0 – 192.168.255.255</code></td>
+            <td>Heimnetzwerke und kleinere Firmennetze</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="project-card">
+      <h2>IPv6-Grundlagen</h2>
+      <p>
+        IPv6 wurde entwickelt, weil der IPv4-Adressraum langfristig nicht mehr
+        ausreicht. Eine IPv6-Adresse ist 128 Bit lang und wird hexadezimal geschrieben.
+        Ein Gerät kann unter IPv6 mehrere Adressen besitzen, zum Beispiel eine
+        Link-Local-Adresse und eine Global-Unicast-Adresse.
+      </p>
+
+      <div class="ipv6-grid">
+        <div class="ipv6-card">
+          <h3>Link-Local</h3>
+          <p><code>fe80::/10</code></p>
+          <span>Kommunikation im lokalen Link</span>
+        </div>
+
+        <div class="ipv6-card">
+          <h3>Global Unicast</h3>
+          <p><code>2000::/3</code></p>
+          <span>öffentlich routbare IPv6-Adressen</span>
+        </div>
+
+        <div class="ipv6-card">
+          <h3>Loopback</h3>
+          <p><code>::1/128</code></p>
+          <span>Testadresse des eigenen Geräts</span>
+        </div>
+
+        <div class="ipv6-card">
+          <h3>Unique Local</h3>
+          <p><code>fc00::/7</code></p>
+          <span>lokale private IPv6-Adressbereiche</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h2>Übergang von IPv4 zu IPv6</h2>
+      <p>
+        Da IPv4 und IPv6 nicht einfach gleichzeitig überall ersetzt werden können,
+        existieren Übergangsmechanismen. Sie ermöglichen, dass IPv4- und IPv6-Netze
+        während der Umstellung parallel betrieben werden können.
+      </p>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Mechanismus</th>
+            <th>Beschreibung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dual Stack</td>
+            <td>IPv4 und IPv6 laufen parallel auf demselben Gerät oder Router.</td>
+          </tr>
+          <tr>
+            <td>IPv6-Tunnel</td>
+            <td>IPv6-Pakete werden durch ein IPv4-Netz transportiert.</td>
+          </tr>
+          <tr>
+            <td>DS-Lite</td>
+            <td>IPv4-Verkehr wird über IPv6 übertragen, häufig bei Providern.</td>
+          </tr>
+          <tr>
+            <td>NAT64</td>
+            <td>Übersetzung zwischen IPv6- und IPv4-Kommunikation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="project-card">
+      <h2>Praktische Befehle</h2>
+
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Befehl</th>
+            <th>System</th>
+            <th>Zweck</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>ipconfig /all</code></td>
+            <td>Windows</td>
+            <td>zeigt IP-Konfiguration, MAC-Adresse, Gateway und DNS</td>
+          </tr>
+          <tr>
+            <td><code>ifconfig</code></td>
+            <td>macOS / Linux</td>
+            <td>zeigt Netzwerkschnittstellen und Adressen</td>
+          </tr>
+          <tr>
+            <td><code>arp -a</code></td>
+            <td>Windows / macOS / Linux</td>
+            <td>zeigt den lokalen ARP-Cache</td>
+          </tr>
+          <tr>
+            <td><code>ping 127.0.0.1</code></td>
+            <td>Windows / macOS / Linux</td>
+            <td>testet die lokale TCP/IP-Funktion über die Loopback-Adresse</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="project-card">
+      <h2>Was ich dabei lerne</h2>
+      <ul>
+        <li>Unterschied zwischen MAC-Adresse und IP-Adresse</li>
+        <li>Grundlagen des TCP/IP-Protokollstapels</li>
+        <li>Aufbau von IPv4-Adressen und Subnetzmasken</li>
+        <li>Berechnung von Netzwerkadresse, Broadcast-Adresse und Hostanzahl</li>
+        <li>Grundlagen von IPv6-Adressen und IPv6-Schreibweise</li>
+        <li>Übergangstechnologien zwischen IPv4 und IPv6</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>Bezug zur Systemintegration</h2>
+      <p>
+        Adressierung, Subnetting und TCP/IP gehören zu den wichtigsten Grundlagen
+        der Systemintegration. Diese Kenntnisse werden für IT-Support, Fehlersuche,
+        Netzwerkkonfiguration, Serverbetrieb und Dokumentation benötigt.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h2>Status</h2>
+      <p>
+        Dieses Lernprojekt wird weiter ausgebaut. Geplant sind praktische Übungen
+        mit ipconfig, ping, ARP-Cache, IPv4-Subnetting und einer kleinen
+        Adressplanung für ein Beispielnetz.
+      </p>
+    </div>
+
+  </main>
+
+</body>
+</html>
